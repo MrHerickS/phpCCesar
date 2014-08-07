@@ -86,9 +86,9 @@ function descriptografia($t, $d) { // Função para descriptografia
 	   		}
 
 	   		if ($final < 0) { // Se o valor final for menor que zero
-				$last = $a[$final - $max]; // Procura a letra com o valor somando o valor final com o número máximo (no caso 26)
+				$last = $a[$final + $max]; // Procura a letra com o valor somando o valor final com o número máximo (no caso 26)
 	   		} elseif ($final > $max - 1) { // Caso o valor final seja maior que o valor máximo menos 1 (O 1 refere-se graças a lista apresentar 27 itens, mas ela começa a contar do 0, não do 1)
-	   			$last = $a[$final + $max]; // Define a letra cujo valor final menos o valor máximo corresponde
+	   			$last = $a[$final - $max]; // Define a letra cujo valor final menos o valor máximo corresponde
 	   		} else { // Ou então
 	   			$last = $a[$final]; // Caso ele seja um número maior que 0 e menor que o máximo (26) prossegue
 	   		}
